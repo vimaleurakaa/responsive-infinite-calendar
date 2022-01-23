@@ -1,0 +1,44 @@
+$grey60: #f5f5f5;
+$white: #fff;
+$black: #000;
+
+.Cal__Month__row.Cal__Month__partial:first-child li:first-child {
+  box-shadow: unset;
+}
+
+.Cal__Day__selection {
+  display: none;
+}
+
+.Cal__Month__rows {
+  background: $white;
+}
+
+.Cal__Weekdays__day {
+  color: $black;
+  font-weight: 600;
+}
+
+.Cal__Day__root {
+  border: 1px solid $grey60;
+}
+
+.Cal__Today__chevron {
+  display: none;
+}
+
+.Cal__Month__row {
+  line-height: initial !important;
+  .Cal__Day__root {
+    height: 160px;
+  }
+}
+
+.Cal__Day__month {
+  top: unset;
+  bottom: 18px;
+}
+
+.Cal__Day__root.Cal__Day__today:before {
+  display: none;
+}

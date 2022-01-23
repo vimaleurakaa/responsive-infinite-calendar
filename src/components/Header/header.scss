@@ -1,0 +1,23 @@
+$pearlBlue: #36b1e7;
+$charcoal: #4e4e4e;
+$grey70: #e0e0e0;
+header {
+  .header__navigation {
+    font-weight: 600;
+    background-color: #fff;
+    color: $charcoal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 1rem;
+    border-bottom: 1px solid $grey70;
+    li {
+      .header__active {
+        color: $pearlBlue;
+      }
+    }
+    .header__date {
+      margin-right: 2rem;
+    }
+  }
+}
