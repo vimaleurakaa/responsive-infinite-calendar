@@ -83,23 +83,18 @@ const Calendar = () => {
       fetch("https://api.quinn.care/graph", requestObj)
         .then((res) => res.json())
         .then((data) => {
-          // let tempData = {};
-          // res.responseobjects[0].posts.map((item) => {
-          //   const newDate = dayjs(item.calendardatetime);
-          //   tempData[
-          //     `${newDate.format("D")}-${newDate.format("M")}-${newDate.format(
-          //       "YY"
-          //     )}`
-          //   ] = item;
-          // });
-          console.log(data.responseobjects);
+          const __data = {};
+          data.responseobjects.at()?.posts.map((post) => {
+            const { calendardatetime } = post;
+            __data[formatDate(calendardatetime)] = post;
+          });
         })
         .catch((error) => {
           console.log(error);
         });
     };
     dispatch(setEventsData(demoData));
-    //fetchData();
+    fetchData();
   }, []);
 
   useEffect(() => {
